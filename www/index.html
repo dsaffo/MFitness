@@ -12,43 +12,260 @@
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="bower_components/onsenui/js/onsenui.js"></script>
         <!-- app scripts -->
-        
+    <script type="text/javascript" src="js/app.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
        
         <title>Science Rambler</title>
     </head>
     <body>
 
-        <ons-navigator title = "Navigator" id="navigator" page="map.html"></ons-navigator>
+        <ons-navigator id="navigator" page="home.html"></ons-navigator>
 
-        <!-- map page -->
-        <ons-template id="map.html">
-          <ons-page id="map">
+        
+        <ons-template id="home.html">
+            <ons-page class = "home" id="home">
             <!-- page toolbar -->
-            <ons-toolbar>
-            <div class="left"></div>
-              <div class="center">Map</div>
-              <div class="right"></div>
-            <div class="navigation-bar__right navigation-bar--material__right">
-                    <span class="toolbar-button toolbar-button--material">
-                        <i id ="menub", class="zmdi zmdi-more-vert"></i>
-                    </span>
-                </div>
-            </ons-toolbar>
+                <ons-toolbar>
+                    <div class="left"> 
+                        <span id="profiles" class="toolbar-button toolbar-button--material">
+                            <i class="zmdi zmdi-menu"></i>
+                        </span></div>
+                    <div class="center">MFitness</div>
+                    <div class="right">
+                        <span id="settings" class="toolbar-button toolbar-button--material">
+                            <i class="zmdi zmdi-settings"></i>
+                        </span>
+                    </div>
+                </ons-toolbar>
             
             <!-- homeContent - home content -->
             <div id="homeContent" class="page-content">
-              <div id="location"></div>
+                <div id="location"></div>
             </div>
+                
+            <ons-row>
+                <ons-col>
+                    <div id = 'tlb' class="module-box">
+                        <span id = 'tlm' class="module-text">A</span>
+                    </div>
+                </ons-col>
+                <ons-col>
+                    <div id = 'trb' class="module-box">
+                        <span id='trm' class="module-text">B</span>
+                    </div>
+                </ons-col>
+            </ons-row>
+            
+            <ons-row>
+                <ons-col>
+                    <div id="mb" class="module-box-long">
+                      <span  id ="mm" class="module-text">C</span>
+                    </div>
+                </ons-col>
+            </ons-row>
+                
+            <ons-row>
+                <ons-col>
+                    <div id = 'blb' class="module-box">
+                        <span id='blm' class="module-text">D</span>
+                    </div>
+                </ons-col>
+                <ons-col>
+                    <div id = 'brb' class="module-box">
+                        <span id='brm' class="module-text">E</span>
+                    </div>
+                </ons-col>
+            </ons-row>
+                
             <!-- add container for map-->
-           <div>
-            <button id = "leftB" class ="button button--material">Test</button>
-              </div>
+            <!--<div>
+                <button id = "leftB" class ="button button--material">Test</button>
+            </div>-->
           
-          </ons-page>
+            </ons-page>
         </ons-template>
         
         <!-- menu page -->
+        <ons-template id="test.html">
+            <ons-page id="test">
+            <!-- page toolbar -->
+                <ons-toolbar>
+                    <div class="left"><ons-back-button>Back</ons-back-button></div>
+                    <div class="center">MFitness</div>
+                    <div class="right"></div>
+                </ons-toolbar>
+            </ons-page>
+        </ons-template>
       
+         <ons-template id="modules.html">
+            <ons-page id="modules">
+            <!-- page toolbar -->
+                <ons-toolbar>
+                    <div class="left"><ons-back-button>Back</ons-back-button></div>
+                    <div class="center">Modules</div>
+                    <div class="right"></div>
+                </ons-toolbar>
+                
+                
+                <ons-tabbar position="top">
+                    <ons-tab page="m1.html" label="M1" active="true"></ons-tab>
+                    <ons-tab page="m2.html" label="M2" ></ons-tab>
+                    <ons-tab page="m3.html" label="M3" ></ons-tab>
+                    <ons-tab page="m4.html" label="M4" ></ons-tab>
+                    <ons-tab page="m5.html" label="M5"></ons-tab>
+                </ons-tabbar>
+                
+                
+                <ons-template id="m1.html">
+                    <ons-page id="m1">
+                        <div class="card">
+                            <span class="card-text">Speed</span>
+                        </div>
+                        <div class="card">
+                            <span class="card-text">Distance</span>
+                        </div>
+                        <div class="card">
+                            <span class="card-text">Horn</span>
+                        </div>
+                        <div class="card">
+                            <span class="card-text">Heart Rate</span>
+                        </div>
+                        <div class="card">
+                            <span class="card-text">Calories Burned</span>
+                        </div>
+                         <div class="card">
+                            <span class="card-text">Calories Consumed</span>
+                        </div>
+                        <div class="card">
+                            <span class="card-text">Workout</span>
+                        </div>
+                        <div class="card">
+                            <span class="card-text">Music</span>
+                        </div>
+                    </ons-page>
+                </ons-template>
+                
+                <ons-template id="m2.html">
+                    <ons-page id="m2">
+                        <div class="card">
+                            <span class="card-text">Speed</span>
+                        </div>
+                        <div class="card">
+                            <span class="card-text">Distance</span>
+                        </div>
+                        <div class="card">
+                            <span class="card-text">Horn</span>
+                        </div>
+                        <div class="card">
+                            <span class="card-text">Heart Rate</span>
+                        </div>
+                        <div class="card">
+                            <span class="card-text">Calories Burned</span>
+                        </div>
+                         <div class="card">
+                            <span class="card-text">Calories Consumed</span>
+                        </div>
+                        <div class="card">
+                            <span class="card-text">Workout</span>
+                        </div>
+                        <div class="card">
+                            <span class="card-text">Music</span>
+                        </div>
+                    </ons-page>
+                </ons-template>
+                
+                <ons-template id="m3.html">
+                    <ons-page id="m3">
+                        <div class="card">
+                            <span class="card-text">Speed</span>
+                        </div>
+                        <div class="card">
+                            <span class="card-text">Distance</span>
+                        </div>
+                        <div class="card">
+                            <span class="card-text">Horn</span>
+                        </div>
+                        <div class="card">
+                            <span class="card-text">Heart Rate</span>
+                        </div>
+                        <div class="card">
+                            <span class="card-text">Calories Burned</span>
+                        </div>
+                         <div class="card">
+                            <span class="card-text">Calories Consumed</span>
+                        </div>
+                        <div class="card">
+                            <span class="card-text">Workout</span>
+                        </div>
+                        <div class="card">
+                            <span class="card-text">Music</span>
+                        </div>
+                        <div class="card">
+                            <span class="card-text">Stop Watch</span>
+                        </div>
+                    </ons-page>
+                </ons-template>
+                
+                <ons-template id="m4.html">
+                    <ons-page id="m4">
+                        <div class="card">
+                            <span class="card-text">Speed</span>
+                        </div>
+                        <div class="card">
+                            <span class="card-text">Distance</span>
+                        </div>
+                        <div class="card">
+                            <span class="card-text">Horn</span>
+                        </div>
+                        <div class="card">
+                            <span class="card-text">Heart Rate</span>
+                        </div>
+                        <div class="card">
+                            <span class="card-text">Calories Burned</span>
+                        </div>
+                         <div class="card">
+                            <span class="card-text">Calories Consumed</span>
+                        </div>
+                        <div class="card">
+                            <span class="card-text">Workout</span>
+                        </div>
+                        <div class="card">
+                            <span class="card-text">Music</span>
+                        </div>
+                    </ons-page>
+                </ons-template>
+                
+                <ons-template id="m5.html">
+                    <ons-page id="m5">
+                        <div class="card">
+                            <span class="card-text">Speed</span>
+                        </div>
+                        <div class="card">
+                            <span class="card-text">Distance</span>
+                        </div>
+                        <div class="card">
+                            <span class="card-text">Horn</span>
+                        </div>
+                        <div class="card">
+                            <span class="card-text">Heart Rate</span>
+                        </div>
+                        <div class="card">
+                            <span class="card-text">Calories Burned</span>
+                        </div>
+                         <div class="card">
+                            <span class="card-text">Calories Consumed</span>
+                        </div>
+                        <div class="card">
+                            <span class="card-text">Workout</span>
+                        </div>
+                        <div class="card">
+                            <span class="card-text">Music</span>
+                        </div>
+                    </ons-page>
+                </ons-template>
+                
+             </ons-page>
+        </ons-template>
+        
     </body>
 </html>

@@ -46,12 +46,12 @@
             <ons-row>
                 <ons-col>
                     <div id = 'tlb' class="module-box">
-                        <span id = 'tlm' class="module-text">A</span>
+                         <span id='tlm' class="module-text">M1</span>
                     </div>
                 </ons-col>
                 <ons-col>
                     <div id = 'trb' class="module-box">
-                        <span id='trm' class="module-text">B</span>
+                        <span id='trm' class="module-text">M2</span>
                     </div>
                 </ons-col>
             </ons-row>
@@ -59,7 +59,7 @@
             <ons-row>
                 <ons-col>
                     <div id="mb" class="module-box-long">
-                      <span  id ="mm" class="module-text">C</span>
+                      <span  id ="mm" class="module-text">M3</span>
                     </div>
                 </ons-col>
             </ons-row>
@@ -67,12 +67,12 @@
             <ons-row>
                 <ons-col>
                     <div id = 'blb' class="module-box">
-                        <span id='blm' class="module-text">D</span>
+                        <span id='blm' class="module-text">M5</span>
                     </div>
                 </ons-col>
                 <ons-col>
                     <div id = 'brb' class="module-box">
-                        <span id='brm' class="module-text">E</span>
+                        <span id='brm' class="module-text">M6</span>
                     </div>
                 </ons-col>
             </ons-row>
@@ -85,15 +85,40 @@
             </ons-page>
         </ons-template>
         
-        <!-- menu page -->
-        <ons-template id="test.html">
-            <ons-page id="test">
+        <!-- detail page -->
+        <ons-template id="detailed.html">
+            <ons-page id="detailed">
             <!-- page toolbar -->
                 <ons-toolbar>
                     <div class="left"><ons-back-button>Back</ons-back-button></div>
                     <div class="center">MFitness</div>
                     <div class="right"></div>
                 </ons-toolbar>
+                
+                <ons-fab id='save' position="bottom right">
+                        <ons-icon icon="md-floppy"></ons-icon>
+                </ons-fab>
+                
+               
+                
+                <div id="details" class="detail-box">
+                   
+                </div>
+                
+            </ons-page>
+        </ons-template>
+        
+        <ons-template id="add.html">
+            <ons-page id="add">
+            <!-- page toolbar -->
+                <ons-toolbar>
+                    <div class="left"><ons-back-button>Back</ons-back-button></div>
+                    <div class="center">MFitness</div>
+                    <div class="right"></div>
+                </ons-toolbar>
+                
+            <div id="things"></div>
+                
             </ons-page>
         </ons-template>
       
@@ -118,148 +143,429 @@
                 
                 <ons-template id="m1.html">
                     <ons-page id="m1">
-                        <div class="card">
-                            <span class="card-text">Speed</span>
+                        <div id="speedB" class="radio-button radio-button--material" style= "width: 100%">
+                            <div class="card" >
+                                <span class="card-text">Speed</span>
+                                <label  style="  display: inline-block; vertical-align: middle; margin-top: 25px; float: right; padding-right: 10px">
+                                  <input type="radio" class="radio-button__input radio-button--material__input" name="r" checked="checked">
+                                  <div class="radio-button__checkmark radio-button--material__checkmark" ></div>
+                                </label>
+                            </div>
                         </div>
+                        
+                        <div id="distanceB" class="radio-button radio-button--material" style= "width: 100%">
                         <div class="card">
                             <span class="card-text">Distance</span>
+                             <label  style="display: inline-block; vertical-align: middle; margin-top: 25px; float: right; padding-right: 10px">
+                              <input type="radio" class="radio-button__input radio-button--material__input" name="r" checked="checked">
+                              <div class="radio-button__checkmark radio-button--material__checkmark" ></div>
+                            </label>
                         </div>
+                        </div>
+                        
+                        <div id="hornB" class="radio-button radio-button--material" style= "width: 100%">
                         <div class="card">
                             <span class="card-text">Horn</span>
+                             <label  style="display: inline-block; vertical-align: middle; margin-top: 25px; float: right; padding-right: 10px">
+                              <input type="radio" class="radio-button__input radio-button--material__input" name="r" checked="checked">
+                              <div class="radio-button__checkmark radio-button--material__checkmark" ></div>
+                            </label>
                         </div>
+                        </div>
+                        
+                        <div id="heartrateB" class="radio-button radio-button--material" style= "width: 100%">
                         <div class="card">
                             <span class="card-text">Heart Rate</span>
+                             <label  style="display: inline-block; vertical-align: middle; margin-top: 25px; float: right; padding-right: 10px">
+                              <input type="radio" class="radio-button__input radio-button--material__input" name="r" checked="checked">
+                              <div class="radio-button__checkmark radio-button--material__checkmark" ></div>
+                            </label>
                         </div>
+                        </div>
+                        
+                        <div id="calburnB" class="radio-button radio-button--material" style= "width: 100%">
                         <div class="card">
                             <span class="card-text">Calories Burned</span>
+                             <label  style="display: inline-block; vertical-align: middle; margin-top: 25px; float: right; padding-right: 10px">
+                              <input type="radio" class="radio-button__input radio-button--material__input" name="r" checked="checked">
+                              <div class="radio-button__checkmark radio-button--material__checkmark" ></div>
+                            </label>
                         </div>
+                        </div>
+                        
+                        <div id="calconB" class="radio-button radio-button--material" style= "width: 100%">
                          <div class="card">
                             <span class="card-text">Calories Consumed</span>
+                              <label  style="display: inline-block; vertical-align: middle; margin-top: 25px; float: right; padding-right: 10px">
+                              <input type="radio" class="radio-button__input radio-button--material__input" name="r" checked="checked">
+                              <div class="radio-button__checkmark radio-button--material__checkmark" ></div>
+                            </label>
                         </div>
+                        </div>
+                        
+                         <div id="workoutB" class="radio-button radio-button--material" style= "width: 100%">
                         <div class="card">
                             <span class="card-text">Workout</span>
+                             <label  style="display: inline-block; vertical-align: middle; margin-top: 25px; float: right; padding-right: 10px">
+                              <input type="radio" class="radio-button__input radio-button--material__input" name="r" checked="checked">
+                              <div class="radio-button__checkmark radio-button--material__checkmark" ></div>
+                            </label>
                         </div>
+                        </div>
+                        
+                         <div id="musicB" class="radio-button radio-button--material" style= "width: 100%">
                         <div class="card">
                             <span class="card-text">Music</span>
+                             <label style="display: inline-block; vertical-align: middle; margin-top: 25px; float: right; padding-right: 10px">
+                              <input type="radio" class="radio-button__input radio-button--material__input" name="r" checked="checked">
+                              <div class="radio-button__checkmark radio-button--material__checkmark" ></div>
+                            </label>
+                        </div>
                         </div>
                     </ons-page>
                 </ons-template>
                 
                 <ons-template id="m2.html">
                     <ons-page id="m2">
-                        <div class="card">
-                            <span class="card-text">Speed</span>
+                            <div id="speedB2" class="radio-button radio-button--material" style= "width: 100%">
+                            <div class="card" >
+                                <span class="card-text">Speed</span>
+                                <label  style="  display: inline-block; vertical-align: middle; margin-top: 25px; float: right; padding-right: 10px">
+                                  <input type="radio" class="radio-button__input radio-button--material__input" name="r" checked="checked">
+                                  <div class="radio-button__checkmark radio-button--material__checkmark" ></div>
+                                </label>
+                            </div>
                         </div>
+                        
+                        <div id="distanceB2" class="radio-button radio-button--material" style= "width: 100%">
                         <div class="card">
                             <span class="card-text">Distance</span>
+                             <label  style="display: inline-block; vertical-align: middle; margin-top: 25px; float: right; padding-right: 10px">
+                              <input type="radio" class="radio-button__input radio-button--material__input" name="r" checked="checked">
+                              <div class="radio-button__checkmark radio-button--material__checkmark" ></div>
+                            </label>
                         </div>
+                        </div>
+                        
+                        <div id="hornB2" class="radio-button radio-button--material" style= "width: 100%">
                         <div class="card">
                             <span class="card-text">Horn</span>
+                             <label  style="display: inline-block; vertical-align: middle; margin-top: 25px; float: right; padding-right: 10px">
+                              <input type="radio" class="radio-button__input radio-button--material__input" name="r" checked="checked">
+                              <div class="radio-button__checkmark radio-button--material__checkmark" ></div>
+                            </label>
                         </div>
+                        </div>
+                        
+                        <div id="heartrateB2" class="radio-button radio-button--material" style= "width: 100%">
                         <div class="card">
                             <span class="card-text">Heart Rate</span>
+                             <label  style="display: inline-block; vertical-align: middle; margin-top: 25px; float: right; padding-right: 10px">
+                              <input type="radio" class="radio-button__input radio-button--material__input" name="r" checked="checked">
+                              <div class="radio-button__checkmark radio-button--material__checkmark" ></div>
+                            </label>
                         </div>
+                        </div>
+                        
+                        <div id="calburnB2" class="radio-button radio-button--material" style= "width: 100%">
                         <div class="card">
                             <span class="card-text">Calories Burned</span>
+                             <label  style="display: inline-block; vertical-align: middle; margin-top: 25px; float: right; padding-right: 10px">
+                              <input type="radio" class="radio-button__input radio-button--material__input" name="r" checked="checked">
+                              <div class="radio-button__checkmark radio-button--material__checkmark" ></div>
+                            </label>
                         </div>
+                        </div>
+                        
+                        <div id="calconB2" class="radio-button radio-button--material" style= "width: 100%">
                          <div class="card">
                             <span class="card-text">Calories Consumed</span>
+                              <label  style="display: inline-block; vertical-align: middle; margin-top: 25px; float: right; padding-right: 10px">
+                              <input type="radio" class="radio-button__input radio-button--material__input" name="r" checked="checked">
+                              <div class="radio-button__checkmark radio-button--material__checkmark" ></div>
+                            </label>
                         </div>
+                        </div>
+                        
+                         <div id="workoutB2" class="radio-button radio-button--material" style= "width: 100%">
                         <div class="card">
                             <span class="card-text">Workout</span>
+                             <label  style="display: inline-block; vertical-align: middle; margin-top: 25px; float: right; padding-right: 10px">
+                              <input type="radio" class="radio-button__input radio-button--material__input" name="r" checked="checked">
+                              <div class="radio-button__checkmark radio-button--material__checkmark" ></div>
+                            </label>
                         </div>
+                        </div>
+                        
+                         <div id="musicB2" class="radio-button radio-button--material" style= "width: 100%">
                         <div class="card">
                             <span class="card-text">Music</span>
+                             <label style="display: inline-block; vertical-align: middle; margin-top: 25px; float: right; padding-right: 10px">
+                              <input type="radio" class="radio-button__input radio-button--material__input" name="r" checked="checked">
+                              <div class="radio-button__checkmark radio-button--material__checkmark" ></div>
+                            </label>
+                        </div>
                         </div>
                     </ons-page>
                 </ons-template>
                 
                 <ons-template id="m3.html">
                     <ons-page id="m3">
-                        <div class="card">
-                            <span class="card-text">Speed</span>
+                             <div id="speedB3" class="radio-button radio-button--material" style= "width: 100%">
+                            <div class="card" >
+                                <span class="card-text">Speed</span>
+                                <label  style="  display: inline-block; vertical-align: middle; margin-top: 25px; float: right; padding-right: 10px">
+                                  <input type="radio" class="radio-button__input radio-button--material__input" name="r" checked="checked">
+                                  <div class="radio-button__checkmark radio-button--material__checkmark" ></div>
+                                </label>
+                            </div>
                         </div>
+                        
+                        <div id="distanceB3" class="radio-button radio-button--material" style= "width: 100%">
                         <div class="card">
                             <span class="card-text">Distance</span>
+                             <label  style="display: inline-block; vertical-align: middle; margin-top: 25px; float: right; padding-right: 10px">
+                              <input type="radio" class="radio-button__input radio-button--material__input" name="r" checked="checked">
+                              <div class="radio-button__checkmark radio-button--material__checkmark" ></div>
+                            </label>
                         </div>
+                        </div>
+                        
+                        <div id="hornB3" class="radio-button radio-button--material" style= "width: 100%">
                         <div class="card">
                             <span class="card-text">Horn</span>
+                             <label  style="display: inline-block; vertical-align: middle; margin-top: 25px; float: right; padding-right: 10px">
+                              <input type="radio" class="radio-button__input radio-button--material__input" name="r" checked="checked">
+                              <div class="radio-button__checkmark radio-button--material__checkmark" ></div>
+                            </label>
                         </div>
+                        </div>
+                        
+                        <div id="heartrateB3" class="radio-button radio-button--material" style= "width: 100%">
                         <div class="card">
                             <span class="card-text">Heart Rate</span>
+                             <label  style="display: inline-block; vertical-align: middle; margin-top: 25px; float: right; padding-right: 10px">
+                              <input type="radio" class="radio-button__input radio-button--material__input" name="r" checked="checked">
+                              <div class="radio-button__checkmark radio-button--material__checkmark" ></div>
+                            </label>
                         </div>
+                        </div>
+                        
+                        <div id="calburnB3" class="radio-button radio-button--material" style= "width: 100%">
                         <div class="card">
                             <span class="card-text">Calories Burned</span>
+                             <label  style="display: inline-block; vertical-align: middle; margin-top: 25px; float: right; padding-right: 10px">
+                              <input type="radio" class="radio-button__input radio-button--material__input" name="r" checked="checked">
+                              <div class="radio-button__checkmark radio-button--material__checkmark" ></div>
+                            </label>
                         </div>
+                        </div>
+                        
+                        <div id="calconB3" class="radio-button radio-button--material" style= "width: 100%">
                          <div class="card">
                             <span class="card-text">Calories Consumed</span>
+                              <label  style="display: inline-block; vertical-align: middle; margin-top: 25px; float: right; padding-right: 10px">
+                              <input type="radio" class="radio-button__input radio-button--material__input" name="r" checked="checked">
+                              <div class="radio-button__checkmark radio-button--material__checkmark" ></div>
+                            </label>
                         </div>
+                        </div>
+                        
+                         <div id="workoutB3" class="radio-button radio-button--material" style= "width: 100%">
                         <div class="card">
                             <span class="card-text">Workout</span>
+                             <label  style="display: inline-block; vertical-align: middle; margin-top: 25px; float: right; padding-right: 10px">
+                              <input type="radio" class="radio-button__input radio-button--material__input" name="r" checked="checked">
+                              <div class="radio-button__checkmark radio-button--material__checkmark" ></div>
+                            </label>
                         </div>
+                        </div>
+                        
+                         <div id="musicB3" class="radio-button radio-button--material" style= "width: 100%">
                         <div class="card">
                             <span class="card-text">Music</span>
+                             <label style="display: inline-block; vertical-align: middle; margin-top: 25px; float: right; padding-right: 10px">
+                              <input type="radio" class="radio-button__input radio-button--material__input" name="r" checked="checked">
+                              <div class="radio-button__checkmark radio-button--material__checkmark" ></div>
+                            </label>
                         </div>
+                        </div>
+                        <div id="stopwatchB3" class="radio-button radio-button--material" style= "width: 100%">
                         <div class="card">
                             <span class="card-text">Stop Watch</span>
+                             <label  style="display: inline-block; vertical-align: middle; margin-top:25px; float: right">
+                              <input type="radio" class="radio-button__input radio-button--material__input" name="r" checked="checked">
+                              <div class="radio-button__checkmark radio-button--material__checkmark" ></div>
+                            </label>
+                        </div>
                         </div>
                     </ons-page>
                 </ons-template>
                 
                 <ons-template id="m4.html">
                     <ons-page id="m4">
-                        <div class="card">
-                            <span class="card-text">Speed</span>
+                        <div id="speedB4" class="radio-button radio-button--material" style= "width: 100%">
+                            <div class="card" >
+                                <span class="card-text">Speed</span>
+                                <label  style="  display: inline-block; vertical-align: middle; margin-top: 25px; float: right; padding-right: 10px">
+                                  <input type="radio" class="radio-button__input radio-button--material__input" name="r" checked="checked">
+                                  <div class="radio-button__checkmark radio-button--material__checkmark" ></div>
+                                </label>
+                            </div>
                         </div>
+                        
+                        <div id="distanceB4" class="radio-button radio-button--material" style= "width: 100%">
                         <div class="card">
                             <span class="card-text">Distance</span>
+                             <label  style="display: inline-block; vertical-align: middle; margin-top: 25px; float: right; padding-right: 10px">
+                              <input type="radio" class="radio-button__input radio-button--material__input" name="r" checked="checked">
+                              <div class="radio-button__checkmark radio-button--material__checkmark" ></div>
+                            </label>
                         </div>
+                        </div>
+                        
+                        <div id="hornB4" class="radio-button radio-button--material" style= "width: 100%">
                         <div class="card">
                             <span class="card-text">Horn</span>
+                             <label  style="display: inline-block; vertical-align: middle; margin-top: 25px; float: right; padding-right: 10px">
+                              <input type="radio" class="radio-button__input radio-button--material__input" name="r" checked="checked">
+                              <div class="radio-button__checkmark radio-button--material__checkmark" ></div>
+                            </label>
                         </div>
+                        </div>
+                        
+                        <div id="heartrateB4" class="radio-button radio-button--material" style= "width: 100%">
                         <div class="card">
                             <span class="card-text">Heart Rate</span>
+                             <label  style="display: inline-block; vertical-align: middle; margin-top: 25px; float: right; padding-right: 10px">
+                              <input type="radio" class="radio-button__input radio-button--material__input" name="r" checked="checked">
+                              <div class="radio-button__checkmark radio-button--material__checkmark" ></div>
+                            </label>
                         </div>
+                        </div>
+                        
+                        <div id="calburnB4" class="radio-button radio-button--material" style= "width: 100%">
                         <div class="card">
                             <span class="card-text">Calories Burned</span>
+                             <label  style="display: inline-block; vertical-align: middle; margin-top: 25px; float: right; padding-right: 10px">
+                              <input type="radio" class="radio-button__input radio-button--material__input" name="r" checked="checked">
+                              <div class="radio-button__checkmark radio-button--material__checkmark" ></div>
+                            </label>
                         </div>
+                        </div>
+                        
+                        <div id="calconB4" class="radio-button radio-button--material" style= "width: 100%">
                          <div class="card">
                             <span class="card-text">Calories Consumed</span>
+                              <label  style="display: inline-block; vertical-align: middle; margin-top: 25px; float: right; padding-right: 10px">
+                              <input type="radio" class="radio-button__input radio-button--material__input" name="r" checked="checked">
+                              <div class="radio-button__checkmark radio-button--material__checkmark" ></div>
+                            </label>
                         </div>
+                        </div>
+                        
+                         <div id="workoutB4" class="radio-button radio-button--material" style= "width: 100%">
                         <div class="card">
                             <span class="card-text">Workout</span>
+                             <label  style="display: inline-block; vertical-align: middle; margin-top: 25px; float: right; padding-right: 10px">
+                              <input type="radio" class="radio-button__input radio-button--material__input" name="r" checked="checked">
+                              <div class="radio-button__checkmark radio-button--material__checkmark" ></div>
+                            </label>
                         </div>
+                        </div>
+                        
+                         <div id="musicB4" class="radio-button radio-button--material" style= "width: 100%">
                         <div class="card">
                             <span class="card-text">Music</span>
+                             <label style="display: inline-block; vertical-align: middle; margin-top: 25px; float: right; padding-right: 10px">
+                              <input type="radio" class="radio-button__input radio-button--material__input" name="r" checked="checked">
+                              <div class="radio-button__checkmark radio-button--material__checkmark" ></div>
+                            </label>
+                        </div>
                         </div>
                     </ons-page>
                 </ons-template>
                 
                 <ons-template id="m5.html">
                     <ons-page id="m5">
-                        <div class="card">
-                            <span class="card-text">Speed</span>
+                            <div id="speedB5" class="radio-button radio-button--material" style= "width: 100%">
+                            <div class="card" >
+                                <span class="card-text">Speed</span>
+                                <label  style="  display: inline-block; vertical-align: middle; margin-top: 25px; float: right; padding-right: 10px">
+                                  <input type="radio" class="radio-button__input radio-button--material__input" name="r" checked="checked">
+                                  <div class="radio-button__checkmark radio-button--material__checkmark" ></div>
+                                </label>
+                            </div>
                         </div>
+                        
+                        <div id="distanceB5" class="radio-button radio-button--material" style= "width: 100%">
                         <div class="card">
                             <span class="card-text">Distance</span>
+                             <label  style="display: inline-block; vertical-align: middle; margin-top: 25px; float: right; padding-right: 10px">
+                              <input type="radio" class="radio-button__input radio-button--material__input" name="r" checked="checked">
+                              <div class="radio-button__checkmark radio-button--material__checkmark" ></div>
+                            </label>
                         </div>
+                        </div>
+                        
+                        <div id="hornB5" class="radio-button radio-button--material" style= "width: 100%">
                         <div class="card">
                             <span class="card-text">Horn</span>
+                             <label  style="display: inline-block; vertical-align: middle; margin-top: 25px; float: right; padding-right: 10px">
+                              <input type="radio" class="radio-button__input radio-button--material__input" name="r" checked="checked">
+                              <div class="radio-button__checkmark radio-button--material__checkmark" ></div>
+                            </label>
                         </div>
+                        </div>
+                        
+                        <div id="heartrateB5" class="radio-button radio-button--material" style= "width: 100%">
                         <div class="card">
                             <span class="card-text">Heart Rate</span>
+                             <label  style="display: inline-block; vertical-align: middle; margin-top: 25px; float: right; padding-right: 10px">
+                              <input type="radio" class="radio-button__input radio-button--material__input" name="r" checked="checked">
+                              <div class="radio-button__checkmark radio-button--material__checkmark" ></div>
+                            </label>
                         </div>
+                        </div>
+                        
+                        <div id="calburnB5" class="radio-button radio-button--material" style= "width: 100%">
                         <div class="card">
                             <span class="card-text">Calories Burned</span>
+                             <label  style="display: inline-block; vertical-align: middle; margin-top: 25px; float: right; padding-right: 10px">
+                              <input type="radio" class="radio-button__input radio-button--material__input" name="r" checked="checked">
+                              <div class="radio-button__checkmark radio-button--material__checkmark" ></div>
+                            </label>
                         </div>
+                        </div>
+                        
+                        <div id="calconB5" class="radio-button radio-button--material" style= "width: 100%">
                          <div class="card">
                             <span class="card-text">Calories Consumed</span>
+                              <label  style="display: inline-block; vertical-align: middle; margin-top: 25px; float: right; padding-right: 10px">
+                              <input type="radio" class="radio-button__input radio-button--material__input" name="r" checked="checked">
+                              <div class="radio-button__checkmark radio-button--material__checkmark" ></div>
+                            </label>
                         </div>
+                        </div>
+                        
+                         <div id="workoutB5" class="radio-button radio-button--material" style= "width: 100%">
                         <div class="card">
                             <span class="card-text">Workout</span>
+                             <label  style="display: inline-block; vertical-align: middle; margin-top: 25px; float: right; padding-right: 10px">
+                              <input type="radio" class="radio-button__input radio-button--material__input" name="r" checked="checked">
+                              <div class="radio-button__checkmark radio-button--material__checkmark" ></div>
+                            </label>
                         </div>
+                        </div>
+                        
+                         <div id="musicB5" class="radio-button radio-button--material" style= "width: 100%">
                         <div class="card">
                             <span class="card-text">Music</span>
+                             <label style="display: inline-block; vertical-align: middle; margin-top: 25px; float: right; padding-right: 10px">
+                              <input type="radio" class="radio-button__input radio-button--material__input" name="r" checked="checked">
+                              <div class="radio-button__checkmark radio-button--material__checkmark" ></div>
+                            </label>
+                        </div>
                         </div>
                     </ons-page>
                 </ons-template>

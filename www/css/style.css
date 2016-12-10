@@ -16,6 +16,20 @@ vertical-align: middle;
 margin: 10px;
 }
 
+.detail-box{
+    width: 90%;
+   
+    background-color: #141414;
+    
+	top:0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	 display: flex;
+  flex-direction: column;
+  min-height: 90vh;
+	margin: auto;
+}
 
 .module-box{
 box-shadow: 0 1px 4px rgba(0,0,0,0.3);
@@ -39,4 +53,11 @@ font-size: 50px;
 display: inline-block;
 vertical-align: middle;
 line-height: 160px;
+}
+
+
+.module-text2{
+color: #ff3030;
+font-size: 10px;
+display: inline-block;
 }
